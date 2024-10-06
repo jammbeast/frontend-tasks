@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maket</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
     <nav>
         <a href="index.html">Главная</a>
-        <a href="#">Первый семестр</a>
+        <a href="first.html">Первый семестр</a>
         <a href="#">Второй семестр</a>
         <a href="index1.html">Услуги</a>
         <a href="#">Авторизация</a>
@@ -33,69 +34,64 @@
 
     <main>
         <aside>
-            <h2> Навигация</h2>
+            <h2>Навигация</h2>
         </aside>
-        <div class="product-wrapper">
-            <h2>Разработка вэб приложений</h2>
-            <ul class="product">
+        <section class="product-wrapper">
+            <h2>Разработка веб-приложений</h2>
+            <ul class="product-list">
                 <li>
-                    <article class="product-window1">
-                        <img src="product-image.png" alt="product-image1" height="250" length="250">
-                        <h3> Сайт визитка</h3>
-                        <div class="product-button">
-                            <button class="product-button1" onclick="showModal('modal1')">Подробнее</button>
-                        </div>
+                    <article class="product-card">
+                        <img src="product-image.png" alt="Сайт визитка" height="250" width="250">
+                        <h3>Сайт визитка</h3>
+                        <button onclick="showModal('modal1')">Подробнее</button>
                     </article>
                 </li>
                 <li>
-                    <article class="product-window2">
-                        <img src="product-image.png" alt="product-image2" height="250" length="250">
-                        <h3> Корпоративный Сайт</h3>
-                        <div class="product-button">
-                            <button class="product-button2" onclick="showModal('modal2')">Подробнее</button>
-                        </div>
+                    <article class="product-card">
+                        <img src="product-image.png" alt="Корпоративный сайт" height="250" width="250">
+                        <h3>Корпоративный сайт</h3>
+                        <button onclick="showModal('modal2')">Подробнее</button>
                     </article>
                 </li>
                 <li>
-                    <article class="product-window3">
-                        <img src="product-image.png" alt="product-image3" height="250" length="250">
-                        <h3> Интернет-магазин</h3>
-                        <div class="product-button">
-                            <button class="product-button3" onclick="showModal('modal3')">Подробнее</button>
-                        </div>
+                    <article class="product-card">
+                        <img src="product-image.png" alt="Интернет-магазин" height="250" width="250">
+                        <h3>Интернет-магазин</h3>
+                        <button onclick="showModal('modal3')">Подробнее</button>
                     </article>
                 </li>
             </ul>
-        </div>
+        </section>
 
+        <!-- Общее модальное окно -->
         <dialog class="modal" id="modal1">
             <div class="modal-content">
                 <span class="close" onclick="hideModal('modal1')">×</span>
-                <h2>Сайт Визитка</h2>
-                <form id="form">
-                    <label for="name">Имя:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                <h2>Сайт визитка</h2>
+                <form id="form1">
+                    <label for="name1">Имя:</label>
+                    <input type="text" id="name1" name="name" required><br><br>
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email1">Email:</label>
+                    <input type="email" id="email1" name="email" required><br><br>
 
-                    <label for="phone">Телефон:</label><br>
-                    <input type="number" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
-                    
+                    <label for="phone1">Телефон:</label>
+                    <input type="tel" id="phone1" name="phone" pattern="[0-9]{10}" placeholder="1234567890"
+                        required><br><br>
 
-                    <label for="country">Страна:</label><br>
-                    <select id="country" name="country" required>
+                    <label for="country1">Страна:</label>
+                    <select id="country1" name="country" required>
                         <option value="">Выберите страну</option>
                         <option value="ru">Россия</option>
                         <option value="us">США</option>
                         <option value="uk">Великобритания</option>
                     </select><br><br>
 
-                    <label for="date">Дата:</label><br>
-                    <input type="date" id="date" name="date" required><br><br>
+                    <label for="date1">Дата:</label>
+                    <input type="date" id="date1" name="date" required><br><br>
 
-                    <label for="comment">Комментарий:</label><br>
-                    <textarea id="comment" name="comment"></textarea><br><br>
+                    <label for="comment1">Комментарий:</label>
+                    <textarea id="comment1" name="comment"></textarea><br><br>
 
                     <button type="submit">Отправить</button>
                 </form>
@@ -105,62 +101,67 @@
         <dialog class="modal" id="modal2">
             <div class="modal-content">
                 <span class="close" onclick="hideModal('modal2')">×</span>
-                <h2>Корпоративный Сайт</h2>
-                <form id="form">
-                    <label for="name">Имя:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                <h2>Корпоративный сайт</h2>
+                <form id="form2">
+                    <!-- Одинаковая структура формы -->
+                    <label for="name2">Имя:</label>
+                    <input type="text" id="name2" name="name" required><br><br>
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email2">Email:</label>
+                    <input type="email" id="email2" name="email" required><br><br>
 
-                    <label for="phone">Телефон:</label><br>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+                    <label for="phone2">Телефон:</label>
+                    <input type="tel" id="phone2" name="phone" pattern="[0-9]{10}" placeholder="1234567890"
+                        required><br><br>
 
-                    <label for="country">Страна:</label><br>
-                    <select id="country" name="country" required>
+                    <label for="country2">Страна:</label>
+                    <select id="country2" name="country" required>
                         <option value="">Выберите страну</option>
                         <option value="ru">Россия</option>
                         <option value="us">США</option>
                         <option value="uk">Великобритания</option>
                     </select><br><br>
 
-                    <label for="date">Дата:</label><br>
-                    <input type="date" id="date" name="date" required><br><br>
+                    <label for="date2">Дата:</label>
+                    <input type="date" id="date2" name="date" required><br><br>
 
-                    <label for="comment">Комментарий:</label><br>
-                    <textarea id="comment" name="comment"></textarea><br><br>
+                    <label for="comment2">Комментарий:</label>
+                    <textarea id="comment2" name="comment"></textarea><br><br>
 
                     <button type="submit">Отправить</button>
                 </form>
             </div>
         </dialog>
+
         <dialog class="modal" id="modal3">
             <div class="modal-content">
                 <span class="close" onclick="hideModal('modal3')">×</span>
                 <h2>Интернет-магазин</h2>
-                <form id="form">
-                    <label for="name">Имя:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                <form id="form3">
+                    <!-- Повторяющаяся структура формы -->
+                    <label for="name3">Имя:</label>
+                    <input type="text" id="name3" name="name" required><br><br>
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="email3">Email:</label>
+                    <input type="email" id="email3" name="email" required><br><br>
 
-                    <label for="phone">Телефон:</label><br>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+                    <label for="phone3">Телефон:</label>
+                    <input type="tel" id="phone3" name="phone" pattern="[0-9]{10}" placeholder="1234567890"
+                        required><br><br>
 
-                    <label for="country">Страна:</label><br>
-                    <select id="country" name="country" required>
+                    <label for="country3">Страна:</label>
+                    <select id="country3" name="country" required>
                         <option value="">Выберите страну</option>
                         <option value="ru">Россия</option>
                         <option value="us">США</option>
                         <option value="uk">Великобритания</option>
                     </select><br><br>
 
-                    <label for="date">Дата:</label><br>
-                    <input type="date" id="date" name="date" required><br><br>
+                    <label for="date3">Дата:</label>
+                    <input type="date" id="date3" name="date" required><br><br>
 
-                    <label for="comment">Комментарий:</label><br>
-                    <textarea id="comment" name="comment"></textarea><br><br>
+                    <label for="comment3">Комментарий:</label>
+                    <textarea id="comment3" name="comment"></textarea><br><br>
 
                     <button type="submit">Отправить</button>
                 </form>

@@ -1,4 +1,11 @@
-  ul {
+* {
+  font-family: "Comic Sans Ms", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -8,84 +15,115 @@ header {
   text-align: right;
 }
 
-.logo-header{
+.logo-header {
   display: flex;
-  align-items: center;  
+  align-items: center;
+  padding: 10px;
 }
 
-.logo{
+.logo {
   margin-right: auto;
-  padding : 10px;
 }
+
 nav {
-  border-top : 3px solid rgb(0, 0, 0);
-  border-bottom : 3px solid rgb(0, 0, 0);
-  padding: 20px 0;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  padding: 10px 0;
+  text-align: center;
 }
 
 nav a {
   color: black;
   text-decoration: none;
-}
-nav a:visited{
-  color:rgb(0, 0, 0);
-}
-footer{
-  border-top : 3px solid rgb(0, 0, 0);  
-  text-align: center;
+  margin: 0 15px;
+  font-size: 1.1em;
 }
 
-main{
-  display:flex;
+nav a:hover {
+  text-decoration: underline;
 }
-aside{
+
+footer {
+  border-top: 3px solid black;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  padding: 20px;
+}
+
+aside {
   width: 200px;
   padding-right: 20px;
   margin-right: 20px;
-  border-right: 3px solid rgb(0, 0, 0);
+  border-right: 3px solid black;
 }
-aside h2{
+
+aside h2 {
   text-align: left;
+  font-size: 1.5em;
 }
-aside li{
-  text-align: left;
+
+aside li {
+  margin: 10px 0;
+  font-size: 1.2em;
 }
-.content{
+
+aside a {
+  color: black;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+.content {
   flex: 1;
 }
 
-section{
-   padding-left: 30px;
-}
-.myPhoto{
-  padding:0px;
-  padding-right: 20px;
-  padding-top: 30px;  
-}
-
-.Welcome-block{
+.Welcome-block {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-} 
-.Welcome{
-  text-align: left;
-  padding: 0;
-}
-* {
-  font-family: "Comic Sans Ms", cursive ;
-} 
-.product{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-.product-wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  text-align: center;
+  margin-bottom: 30px;
 }
 
+.Welcome {
+  text-align: left;
+}
+
+.myPhoto {
+  margin-left: 20px;
+}
+
+.Welcome h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+
+section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+video {
+  margin-top: 10px;
+}
+
+footer img.reddit {
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+footer img.reddit:hover {
+  transform: scale(1.2);
+}
