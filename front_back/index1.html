@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="logo-header">
+        <img class="logo" src="MR._Robot.png" width="100" height="50" alt="Logo">
+        <header>
+            <p>Группа <u>ЭФБО-04-23</u></p>
+            <p>Зарипов Ренат Александрович</p>
+        </header>
+    </div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="#">Первый семестр</a>
+        <a href="#">Второй семестр</a>
+        <a href="index1.html">Услуги</a>
+        <a href="#">Авторизация</a>
+    </nav>
+
+    <main>
+        <aside>
+            <h2> Навигация</h2>
+        </aside>
+        <div class="product-wrapper">
+            <h2>Разработка вэб приложений</h2>
+            <ul class="product">
+                <li>
+                    <article class="product-window1">
+                        <img src="product-image.png" alt="product-image1" height="250" length="250">
+                        <h3> Сайт визитка</h3>
+                        <div class="product-button">
+                            <button class="product-button1" onclick="showModal('modal1')">Подробнее</button>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="product-window2">
+                        <img src="product-image.png" alt="product-image2" height="250" length="250">
+                        <h3> Корпоративный Сайт</h3>
+                        <div class="product-button">
+                            <button class="product-button2" onclick="showModal('modal2')">Подробнее</button>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="product-window3">
+                        <img src="product-image.png" alt="product-image3" height="250" length="250">
+                        <h3> Интернет-магазин</h3>
+                        <div class="product-button">
+                            <button class="product-button3" onclick="showModal('modal3')">Подробнее</button>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+
+        <dialog class="modal" id="modal1">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('modal1')">×</span>
+                <h2>Сайт Визитка</h2>
+                <form id="form">
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Телефон:</label><br>
+                    <input type="number" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+                    
+
+                    <label for="country">Страна:</label><br>
+                    <select id="country" name="country" required>
+                        <option value="">Выберите страну</option>
+                        <option value="ru">Россия</option>
+                        <option value="us">США</option>
+                        <option value="uk">Великобритания</option>
+                    </select><br><br>
+
+                    <label for="date">Дата:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <label for="comment">Комментарий:</label><br>
+                    <textarea id="comment" name="comment"></textarea><br><br>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </dialog>
+
+        <dialog class="modal" id="modal2">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('modal2')">×</span>
+                <h2>Корпоративный Сайт</h2>
+                <form id="form">
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Телефон:</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+
+                    <label for="country">Страна:</label><br>
+                    <select id="country" name="country" required>
+                        <option value="">Выберите страну</option>
+                        <option value="ru">Россия</option>
+                        <option value="us">США</option>
+                        <option value="uk">Великобритания</option>
+                    </select><br><br>
+
+                    <label for="date">Дата:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <label for="comment">Комментарий:</label><br>
+                    <textarea id="comment" name="comment"></textarea><br><br>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </dialog>
+        <dialog class="modal" id="modal3">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('modal3')">×</span>
+                <h2>Интернет-магазин</h2>
+                <form id="form">
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Телефон:</label><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+
+                    <label for="country">Страна:</label><br>
+                    <select id="country" name="country" required>
+                        <option value="">Выберите страну</option>
+                        <option value="ru">Россия</option>
+                        <option value="us">США</option>
+                        <option value="uk">Великобритания</option>
+                    </select><br><br>
+
+                    <label for="date">Дата:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <label for="comment">Комментарий:</label><br>
+                    <textarea id="comment" name="comment"></textarea><br><br>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>© Зарипов Ренат Александрович, 2023</p>
+        <a href="https://www.reddit.com/?rdt=47588"><img src="reddit-logo-23F13F6A6A-seeklogo.com.png" width="30"
+                height="30"></a>
+    </footer>
+
+    <script>
+        function showModal(modalId) {
+            document.getElementById(modalId).showModal();
+        }
+
+        function hideModal(modalId) {
+            document.getElementById(modalId).close();
+        }
+    </script>
+</body>
+
+</html>
