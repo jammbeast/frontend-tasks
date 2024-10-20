@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый Семестр</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-header">
+            <img src="logo.png" alt="Logo" width="50" height="50">
+            <p class="text-paragraph">Эфбо-04-23</p>
+            <p class="text-paragraph">Зарипов Ренат Александрович</p>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="/index.html">Главная</a>
+        <a href="/first.html">Первый семестр</a>
+        <a href="#">Второй семестр</a>
+        <a href="/services.html#services">Услуги</a>
+        <a href="#">Авторизация</a>
+    </nav>
+
+    <main class="grid-container">
+        <aside class="grid-item">
+            <h3 class="sub-heading">Навигация по странице</h3>
+            <ul>
+                <li><a href="#lectureTable">Лекции</a></li>
+                <li><a href="#practiceTable">Практики</a></li>
+                <li><a href="#map">Адрес вуза</a></li>
+                <li><a href="#pdf-viewer">Рабочая программа</a></li>
+            </ul>
+        </aside>
+
+        <section class="grid-item">
+            <h2 class="sub-heading">Практики</h2>
+            <table id="practiceTable">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Тема</th>
+                        <th>Посещение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Основы веб-разработки</td>
+                        <td><button class="attendance-button" onclick="toggleAttendance(this)">Не посетил</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Создание интерактивных интерфейсов</td>
+                        <td><button class="attendance-button" onclick="toggleAttendance(this)">Не посетил</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="sub-heading">Лекции</h2>
+            <table id="lectureTable">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Тема</th>
+                        <th>Посещение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Введение в HTML и CSS</td>
+                        <td><button class="attendance-button" onclick="toggleAttendance(this)">Не посетил</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>JavaScript для начинающих</td>
+                        <td><button class="attendance-button" onclick="toggleAttendance(this)">Не посетил</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="sub-heading">Адрес вуза</h2>
+            <div id="map"></div>
+
+            <h2 class="sub-heading">Документы</h2>
+            <iframe id="pdf-viewer" src="/assets/document.pdf" frameborder="0"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-paragraph">© Зарипов Ренат Александрович, 2024</p>
+        <a href="https://www.whatsapp.com">
+            <img src="whatsapp.png" alt="WhatsApp" width="30" height="30">
+        </a>
+        <a href="https://www.telegram.org">
+            <img src="telegram.png" alt="Telegram" width="30" height="30">
+        </a>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        // Инициализация карты
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.669986, 37.480409], // Координаты РТУ МИРЭА
+                zoom: 15
+            });
+
+            var myPlacemark = new ymaps.Placemark([55.669986, 37.480409], {
+                balloonContent: 'РТУ МИРЭА'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+
+        // Функция для переключения посещения
+        function toggleAttendance(button) {
+            if (button.textContent === "Не посетил") {
+                button.textContent = "посетил";
+                button.style.backgroundColor = "green";
+                button.style.color = "black";
+            } else {
+                button.textContent = "Не посетил";
+                button.style.backgroundColor = "red";
+                button.style.color = "white";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

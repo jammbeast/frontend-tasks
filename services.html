@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-header">
+            <img src="logo.png" alt="Logo" width="50" height="50">
+            <p class="text-paragraph">Эфбо-04-23</p>
+            <p class="text-paragraph">Зарипов Ренат Александрович</p>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="/index.html">Главная</a>
+        <a href="/first.html">Первый семестр</a>
+        <a href="#">Второй семестр</a>
+        <a href="/services.html#services">Услуги</a>
+        <a href="#">Авторизация</a>
+    </nav>
+
+
+    <main class="grid-container">
+        <aside class="grid-item">
+            <h3 class="sub-heading">Навигация по странице</h3>
+            <ul>
+                <li><a href="#services">Услуги</a></li>
+            </ul>
+        </aside>
+        <section id="services" class="grid-item">
+            <h1 class="main-heading">Разработка веб-приложений</h1>
+
+            <div class="services-container"> </div>
+            <div class="service product-card" onclick="openModal('modal1')">
+                <img src="/assets/service1.jpg" alt="Сайт-визитка" width="200" height="200">
+                <p class="text-paragraph">Сайт-визитка</p>
+            </div>
+            <div class="service product-card" onclick="openModal('modal2')">
+                <img src="/assets/service2.jpg" alt="Корпоративный сайт" width="200" height="200">
+                <p class="text-paragraph">Корпоративный сайт</p>
+            </div>
+            <div class="service product-card" onclick="openModal('modal3')">
+                <img src="/assets/service3.jpg" alt="Интернет-магазин" width="200" height="200">
+                <p class="text-paragraph">Интернет-магазин</p>
+            </div>
+            </div>
+
+            <p class="text-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae velit quos perspiciatis dolorum,...
+            </p>
+        </section>
+    </main>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">×</span>
+            <h2>Заказать Сайт-визитку</h2>
+            <form id="myForm1" onsubmit="submitForm(event,'modal1')">
+                <label for="name1">Имя:</label><br>
+                <input type="text" id="name1" name="name" required><br><br>
+
+                <label for="email1">Email:</label><br>
+                <input type="email" id="email1" name="email" required><br><br>
+
+                <label for="phone1">Телефон:</label><br>
+                <input type="tel" id="phone1" name="phone" required><br><br>
+
+                <label for="country1">Страна:</label><br>
+                <select id="country1" name="country">
+                    <option value="russia">Россия</option>
+                    <option value="usa">США</option>
+                    <option value="canada">Канада</option>
+                </select><br><br>
+                <label for="date1">Дата:</label><br>
+                <input type="date" id="date1" name="date"><br><br>
+
+                <label for="comments1">Комментарии:</label><br>
+                <textarea id="comments1" name="comments" rows="4"></textarea><br><br>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">×</span>
+            <h2>Заказать Корпоративный сайт</h2>
+            <form id="myForm2" onsubmit="submitForm(event, 'modal2')">
+                <label for="name2">Имя:</label><br>
+                <input type="text" id="name2" name="name" required><br><br>
+
+                <label for="email2">Email:</label><br>
+                <input type="email" id="email2" name="email" required><br><br>
+
+                <label for="phone2">Телефон:</label><br>
+                <input type="tel" id="phone2" name="phone" required><br><br>
+
+                <label for="country2">Страна:</label><br>
+                <select id="country2" name="country">
+                    <option value="russia">Россия</option>
+                    <option value="usa">США</option>
+                    <option value="canada">Канада</option>
+                </select><br><br>
+                <label for="date2">Дата:</label><br>
+                <input type="date" id="date2" name="date"><br><br>
+
+                <label for="comments2">Комментарии:</label><br>
+                <textarea id="comments2" name="comments" rows="4"></textarea><br><br>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">×</span>
+            <h2>Заказать Интернет-магазин</h2>
+            <form id="myForm3" onsubmit="submitForm(event, 'modal3')">
+                <label for="name3">Имя:</label><br>
+                <input type="text" id="name3" name="name" required><br><br>
+
+                <label for="email3">Email:</label><br>
+                <input type="email" id="email3" name="email" required><br><br>
+
+                <label for="phone3">Телефон:</label><br>
+                <input type="tel" id="phone3" name="phone" required><br><br>
+
+                <label for="country3">Страна:</label><br>
+                <select id="country3" name="country">
+                    <option value="russia">Россия</option>
+                    <option value="usa">США</option>
+                    <option value="canada">Канада</option>
+                </select><br><br>
+                <label for="date3">Дата:</label><br>
+                <input type="date" id="date3" name="date"><br><br>
+
+                <label for="comments3">Комментарии:</label><br>
+                <textarea id="comments3" name="comments" rows="4"></textarea><br><br>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="text-paragraph">© Зарипов Ренат Александрович, 2024</p>
+        <a href="https://www.whatsapp.com">
+            <img src="whatsapp.png" alt="WhatsApp" width="30" height="30">
+        </a>
+        <a href="https://www.telegram.org">
+            <img src="telegram.png" alt="Telegram" width="30" height="30">
+        </a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/jquery.inputmask.min.js"></script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            // Маска ввода телефона
+            $(`#phone${modalId.slice(-1)}`).inputmask({
+                "mask": "+7 (999) 999-99-99",
+                showMaskOnHover: false
+            });
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        function submitForm(event, modalId) {
+            event.preventDefault();
+
+            //валидация
+            let form = document.getElementById(`myForm${modalId.slice(-1)}`);
+            if (form.checkValidity()) {
+                alert('Форма успешно отправлена!');
+                closeModal(modalId);
+                form.reset();
+            } else {
+                alert('Пожалуйста, заполните все обязательные поля.');
+            }
+        }
+        //закрытие модального окна при клике вне его
+        window.onclick = function (event) {
+            let modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
