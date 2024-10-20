@@ -140,7 +140,7 @@ footer img {
     border: 1px solid #ddd;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    padding: 20px; /* Added padding */
+    padding: 20px; 
     transition: box-shadow 0.3s ease;
 }
 
@@ -155,9 +155,9 @@ footer img {
 /* Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr; /* 3 columns */
-    grid-template-rows: auto auto; /* 2 rows */
-    grid-gap: 20px;  /* Spacing between grid items */
+    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-rows: auto auto; 
+    grid-gap: 20px;  
     margin: 20px;
 }
 
@@ -167,29 +167,29 @@ footer img {
 }
 
 
-/* Flexbox for Nav */
+
 .nav-menu {
     display: flex;
-    justify-content: space-around; /* Distribute evenly */
+    justify-content: space-around; 
     padding: 10px;
 }
 
 
 .nav-menu a {
     padding: 10px;
-    text-align: center; /* Align text inside nav items */
+    text-align: center; 
 }
 
 
 .profile-image {
-  position: relative; /* Needed for absolute positioning of child */
+  position: relative; 
 }
 
 .absolute-image {
   position: absolute;
   top: 50px;
   left: 50px;
-  z-index: 1; /* Ensure it's on top */
+  z-index: 1; 
   opacity: 0.7;
 }
 table {
@@ -209,7 +209,7 @@ th {
 }
 
 .attendance-button {
-    background-color: red; /* Green */
+    background-color: red; 
     border: none;
     color: white;
     padding: 8px 16px;
@@ -219,8 +219,8 @@ th {
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
 }
 
 
@@ -231,24 +231,24 @@ th {
 
 .services-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; 
     justify-content: space-around;
     gap: 20px;
 }
 
 .service {
-  flex-basis: calc(33.33% - 40px); /* 3 items per row with 20px gaps */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  flex-basis: calc(33.33% - 40px); 
+  box-sizing: border-box; 
 }
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+@media (max-width: 768px) { 
   .service {
-    flex-basis: calc(50% - 40px); /* 2 items per row on smaller screens */
+    flex-basis: calc(50% - 40px); 
   }
 }
 
-@media (max-width: 500px) { /* Adjust breakpoint as needed */
+@media (max-width: 500px) { 
   .service {
-    flex-basis: 100%; /* 1 item per row on very small screens */
+    flex-basis: 100%;
   }
 }
